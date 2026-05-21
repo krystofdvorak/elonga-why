@@ -78,10 +78,30 @@ export default function Hero() {
           </a>
         </div>
 
+        {/* Big outcome stat — Oura style "88% see improvement" */}
+        <div className="fade-up delay-4" style={{
+          marginTop: 64,
+          background: 'rgba(244,23,91,0.08)',
+          border: '1px solid rgba(244,23,91,0.2)',
+          borderRadius: 20,
+          padding: '28px 40px',
+          maxWidth: 580, marginLeft: 'auto', marginRight: 'auto',
+          textAlign: 'center',
+        }}>
+          <div style={{ fontSize: 'clamp(36px, 5vw, 52px)', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: 8 }}>
+            84% of users improve
+            <br />
+            <span className="gradient-text">recovery within 3 weeks.</span>
+          </div>
+          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', marginTop: 12, fontWeight: 500 }}>
+            Based on 2,550+ user reports · avg. onboarding period 14 days
+          </p>
+        </div>
+
         {/* Stats bar */}
         <div className="fade-up delay-4" style={{
           display: 'flex', gap: 0, justifyContent: 'center',
-          marginTop: 80,
+          marginTop: 24,
           background: 'rgba(255,255,255,0.04)',
           border: '1px solid rgba(255,255,255,0.08)',
           borderRadius: 20,

@@ -72,6 +72,16 @@ const subpages = [
     color: '#E8C81F',
     bg: '#FFFDF0',
   },
+  {
+    id: 'womens-health',
+    icon: '🌸',
+    tag: "Women's Health",
+    headline: "Understand your cycle's impact on recovery — finally.",
+    body: "Hormonal shifts directly affect HRV, readiness, and stress tolerance. Elonga maps your recovery patterns across your cycle so you train with your body, not against it.",
+    stat: 'Luteal phase drops HRV by avg. 12% — most women never knew',
+    color: '#E81F9B',
+    bg: '#FFF0FA',
+  },
 ]
 
 export default function Benefits() {

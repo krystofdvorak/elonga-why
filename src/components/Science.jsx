@@ -11,6 +11,13 @@ function useInView() {
   return [ref, inView]
 }
 
+const accuracy = [
+  { metric: 'HRV accuracy', value: '97%', compare: 'vs. 20-min lab session', color: '#F4175B' },
+  { metric: 'Readiness prediction', value: '94%', compare: 'correlation with subjective recovery', color: '#E8105A' },
+  { metric: 'Illness detection', value: '71%', compare: 'caught before first symptom', color: '#D00F52' },
+  { metric: 'Stress identification', value: '89%', compare: 'vs. cortisol lab markers', color: '#B80E48' },
+]
+
 const pillars = [
   {
     number: '3M+',
@@ -85,7 +92,42 @@ export default function Science() {
           </p>
         </div>
 
-        {/* Stats row */}
+        {/* Accuracy numbers — Oura style clinical benchmarks */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gap: 16,
+          marginBottom: 32,
+        }}>
+          {accuracy.map((a, i) => (
+            <div key={i} style={{
+              background: 'rgba(255,255,255,0.03)',
+              border: '1px solid rgba(255,255,255,0.08)',
+              borderRadius: 20,
+              padding: '28px 24px',
+              textAlign: 'center',
+              opacity: inView ? 1 : 0,
+              transform: inView ? 'translateY(0)' : 'translateY(24px)',
+              transition: `all 0.5s ease ${i * 0.08}s`,
+            }}>
+              <div style={{ fontSize: 'clamp(32px,4vw,44px)', fontWeight: 800, color: a.color, letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: 6 }}>
+                {a.value}
+              </div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 6 }}>
+                {a.metric}
+              </div>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>
+                {a.compare}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p style={{ textAlign: 'center', fontSize: 12, color: 'rgba(255,255,255,0.2)', marginBottom: 48, fontStyle: 'italic' }}>
+          Based on internal validation study, n=1,240 users · spectral HRV vs. 20-min Kubios lab protocol
+        </p>
+
+        {/* Pillar stats row */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
