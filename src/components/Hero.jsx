@@ -60,8 +60,8 @@ export default function Hero() {
           lineHeight: 1.65,
           fontWeight: 400,
         }}>
-          3 minutes every morning. That's all it takes to see stress building,
-          overtraining accumulating, and illness approaching —&nbsp;
+          3 minutes every morning. That's all it takes to see burnout building,
+          energy draining, and illness approaching —&nbsp;
           <em style={{ color: 'rgba(255,255,255,0.85)', fontStyle: 'normal', fontWeight: 600 }}>before you feel any of it.</em>
         </p>
 

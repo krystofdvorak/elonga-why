@@ -68,23 +68,23 @@ export default function Philosophy() {
               lineHeight: 1.1,
               marginBottom: 24,
             }}>
-              Built for the relentless.
+              For people who take
               <br />
-              <span className="gradient-text">Not the reckless.</span>
+              <span className="gradient-text">the long game seriously.</span>
             </h2>
             <p style={{
               fontSize: 18, lineHeight: 1.75,
               color: 'rgba(255,255,255,0.55)',
               marginBottom: 24,
             }}>
-              Most wellness tools optimize for engagement — more notifications, more streaks, more dashboards. Elonga optimizes for <em style={{ color: 'rgba(255,255,255,0.85)', fontStyle: 'normal', fontWeight: 600 }}>one thing: making your next decision smarter than your last.</em>
+              Most wellness tools are built for 25-year-olds tracking workouts. Elonga is built for people with demanding careers, real responsibilities, and a genuine interest in <em style={{ color: 'rgba(255,255,255,0.85)', fontStyle: 'normal', fontWeight: 600 }}>not burning out before 55.</em>
             </p>
             <p style={{
               fontSize: 16, lineHeight: 1.7,
               color: 'rgba(255,255,255,0.4)',
             }}>
               3 minutes. One score. No streaks to break. No guilt loops.
-              Just a clear signal and the autonomy to act on it.
+              Just a clear daily signal — and the autonomy to act on it.
             </p>
 
             {/* Origin callout */}
@@ -157,9 +157,9 @@ export default function Philosophy() {
             display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap',
           }}>
             {[
-              'Weekend warriors', 'Busy professionals', 'Endurance athletes',
-              'Biohackers', 'Parents who train', 'Anyone over 35',
-              'Women tracking cycles', 'People who\'ve burned out before',
+              'Executives & managers', 'Founders & entrepreneurs', 'Doctors & lawyers',
+              'Anyone over 35', 'People who\'ve burned out before', 'Parents with demanding careers',
+              'People serious about longevity', 'Anyone tired of guessing',
             ].map((tag, i) => (
               <span key={i} style={{
                 fontSize: 14, fontWeight: 600,

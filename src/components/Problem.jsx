@@ -13,21 +13,21 @@ function useInView(threshold = 0.2) {
 
 const problems = [
   {
-    emoji: '🔁',
-    title: 'Overtraining doesn\'t feel like overtraining.',
-    body: 'Until it\'s too late — fatigue, injury, burnout. Your nervous system is depleted weeks before your mind admits it.',
+    emoji: '🔋',
+    title: 'Burnout doesn\'t feel like burnout.',
+    body: 'It feels like a normal Tuesday. Then a normal Wednesday. Your nervous system is running on empty weeks before your mind catches up.',
     color: '#F4175B',
   },
   {
     emoji: '📉',
-    title: 'Stress builds invisibly.',
-    body: 'Work, sleep debt, poor nutrition — it all stacks in your autonomic nervous system. You feel "fine" until you crash.',
+    title: 'Work stress accumulates invisibly.',
+    body: 'Deadlines, sleep debt, back-to-back meetings — it all stacks in your autonomic nervous system. You feel "fine" right until you don\'t.',
     color: '#E8105A',
   },
   {
     emoji: '🤒',
     title: 'Illness starts 24–72h before symptoms.',
-    body: 'Your HRV drops sharply the day before you get sick. Without measuring it, you never knew to watch for it.',
+    body: 'Your HRV drops sharply the day before you get sick. Without tracking it, you fly into your biggest week of the quarter already compromised.',
     color: '#D00F52',
   },
 ]
@@ -49,16 +49,16 @@ export default function Problem() {
             color: 'var(--navy)',
             maxWidth: 680, margin: '0 auto 20px',
           }}>
-            Most people train by feel.
+            You manage everything.
             <br />
-            <span className="gradient-text">The problem? Feel lies.</span>
+            <span className="gradient-text">Except how you actually feel.</span>
           </h2>
           <p style={{
             fontSize: 18, color: 'var(--gray-muted)',
-            maxWidth: 500, margin: '0 auto',
+            maxWidth: 520, margin: '0 auto',
             lineHeight: 1.7,
           }}>
-            Your body gives signals days before you consciously notice them. You just need the right tool to read them.
+            High performers are great at pushing through. That's also exactly why they crash harder. Your body gives signals days in advance — you just don't have the tool to read them.
           </p>
         </div>
 

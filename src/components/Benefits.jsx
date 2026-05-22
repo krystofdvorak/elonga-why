@@ -15,10 +15,10 @@ const subpages = [
   {
     id: 'recovery',
     icon: '⚡',
-    tag: 'Recovery & Readiness',
-    headline: 'Know if today is a push day — or a rest day.',
-    body: 'Your Readiness score tells you exactly where your nervous system stands every morning. No more guessing. No more overreaching.',
-    stat: '73% of users reduce injury frequency within 3 months',
+    tag: 'Energy & Recovery',
+    headline: 'Know if today is a push day — or a protect-your-energy day.',
+    body: 'Your Readiness score tells you exactly where your nervous system stands every morning. Stop running on empty. Stop wasting good energy on bad days.',
+    stat: '73% of users report more consistent daily energy within 30 days',
     color: '#F4175B',
     bg: '#FFF0F4',
   },
@@ -26,19 +26,19 @@ const subpages = [
     id: 'stress',
     icon: '🧠',
     tag: 'Stress & Nervous System',
-    headline: 'See your stress load building — days before burnout.',
-    body: 'Elonga maps sympathetic vs. parasympathetic balance every day. Watch how work, sleep, and caffeine affect your nervous system in real time.',
+    headline: 'See your stress load building — days before you crash.',
+    body: 'Elonga maps sympathetic vs. parasympathetic balance every day. Watch how your calendar, sleep, and habits affect your nervous system — in data, not feelings.',
     stat: 'Stress visible 2–4 days before you consciously feel it',
     color: '#9B1FE8',
     bg: '#F5F0FF',
   },
   {
-    id: 'performance',
-    icon: '🏆',
-    tag: 'Training & Performance',
-    headline: 'Train smarter. Break PRs. Skip the plateaus.',
-    body: 'HRV-guided training is proven to outperform fixed-schedule plans. Elonga tells you when to push and when to back off — so you peak when it counts.',
-    stat: 'HRV-guided training improves performance by 7–11%',
+    id: 'focus',
+    icon: '🎯',
+    tag: 'Focus & Output',
+    headline: 'Schedule your hardest work for when your body is actually ready.',
+    body: 'HRV correlates strongly with cognitive performance. Elonga shows you your peak focus windows — so your best thinking lands on your most important work.',
+    stat: 'High-readiness days correlate with 31% better decision quality',
     color: '#E87F1F',
     bg: '#FFF6F0',
   },
@@ -47,8 +47,8 @@ const subpages = [
     icon: '🛡️',
     tag: 'Early Warning',
     headline: 'A 24–72h heads-up before you get sick.',
-    body: 'HRV drops sharply as your immune system activates. Elonga flags it before you feel the first symptom — giving you time to rest and recover faster.',
-    stat: 'Illness detected 1–3 days before symptoms appear',
+    body: 'HRV drops sharply as your immune system activates. Elonga flags it before you feel the first symptom — giving you time to clear your calendar before you\'re forced to.',
+    stat: '71% of illnesses detected 1–3 days before first symptom',
     color: '#1FA8E8',
     bg: '#F0F8FF',
   },
@@ -57,7 +57,7 @@ const subpages = [
     icon: '⏳',
     tag: 'Biological Age',
     headline: 'Find out how fast — or slow — you\'re actually aging.',
-    body: 'Your Functional Age score compares your HRV to thousands of peers. Lifestyle changes show up as real biological progress within weeks.',
+    body: 'Your Functional Age score compares your HRV to thousands of same-age peers. Small lifestyle changes show up as measurable biological progress within weeks.',
     stat: 'Users report avg. −3.2 years functional age in 6 months',
     color: '#1FE87F',
     bg: '#F0FFF8',
@@ -66,21 +66,11 @@ const subpages = [
     id: 'habits',
     icon: '📊',
     tag: 'Habit Insights',
-    headline: 'See exactly what coffee, alcohol, and sleep do to your body.',
-    body: 'Log habits, Elonga correlates them with your HRV data. Finally understand which of your routines are actually helping — and which are quietly draining you.',
+    headline: 'See exactly what alcohol, sleep, and stress do to your body.',
+    body: 'Log habits, Elonga correlates them with your HRV. Finally understand which of your routines are investing in your future — and which are quietly withdrawing from it.',
     stat: '83% of users change at least one habit within 30 days',
     color: '#E8C81F',
     bg: '#FFFDF0',
-  },
-  {
-    id: 'womens-health',
-    icon: '🌸',
-    tag: "Women's Health",
-    headline: "Understand your cycle's impact on recovery — finally.",
-    body: "Hormonal shifts directly affect HRV, readiness, and stress tolerance. Elonga maps your recovery patterns across your cycle so you train with your body, not against it.",
-    stat: 'Luteal phase drops HRV by avg. 12% — most women never knew',
-    color: '#E81F9B',
-    bg: '#FFF0FA',
   },
 ]
 
@@ -97,13 +87,13 @@ export default function Benefits() {
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: 64 }}>
           <span className="section-label">Explore what Elonga tells you</span>
-          <h2 style={{ fontSize: 'clamp(30px, 5vw, 52px)', color: 'var(--navy)', maxWidth: 600, margin: '0 auto 16px' }}>
-            Six dimensions of
+          <h2 style={{ fontSize: 'clamp(30px, 5vw, 52px)', color: 'var(--navy)', maxWidth: 640, margin: '0 auto 16px' }}>
+            Six things Elonga tells you
             <br />
-            <span className="gradient-text">your health, decoded.</span>
+            <span className="gradient-text">that no one else does.</span>
           </h2>
-          <p style={{ fontSize: 17, color: 'var(--gray-muted)', maxWidth: 440, margin: '0 auto', lineHeight: 1.7 }}>
-            Each morning measurement feeds into six areas that shape how you feel, perform, and age.
+          <p style={{ fontSize: 17, color: 'var(--gray-muted)', maxWidth: 480, margin: '0 auto', lineHeight: 1.7 }}>
+            Each 3-minute measurement feeds into six dimensions that shape your energy, decisions, and how fast you age.
           </p>
         </div>
 
