@@ -61,8 +61,8 @@ export default function Philosophy() {
               borderRadius: '0 12px 12px 0',
             }}>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>
-                <span style={{ color: '#fff', fontWeight: 700 }}>Born in European cardiology labs.</span>
-                {' '}30 years of clinical HRV research — not a Silicon Valley side project.
+                <span style={{ color: '#fff', fontWeight: 700 }}>Most wearables never come off.</span>
+                {' '}Elonga asks for 3 minutes in the morning — then leaves you alone for the rest of the day.
               </p>
             </div>
           </div>
