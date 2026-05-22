@@ -14,7 +14,7 @@ function useInView() {
 const subpages = [
   {
     id: 'recovery',
-    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=280&fit=crop&auto=format&q=80',
+    img: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&h=280&fit=crop&auto=format&q=80',
     tag: 'Recovery',
     headline: 'Know if today is a push day or a rest day.',
     body: 'One clear score every morning. No guessing, no overreaching.',
@@ -38,7 +38,7 @@ const subpages = [
   },
   {
     id: 'early-warning',
-    img: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&h=280&fit=crop&auto=format&q=80',
+    img: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&h=280&fit=crop&auto=format&q=80',
     tag: 'Early Warning',
     headline: 'Know you\'re getting sick before you feel it.',
     body: '24–72h warning before the first symptom. Never get blindsided again.',
