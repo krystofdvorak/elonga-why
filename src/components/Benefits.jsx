@@ -15,30 +15,27 @@ const subpages = [
   {
     id: 'recovery',
     icon: '⚡',
-    tag: 'Energy & Recovery',
-    headline: 'Know if today is a push day — or a protect-your-energy day.',
-    body: 'Your Readiness score tells you exactly where your nervous system stands every morning. Stop running on empty. Stop wasting good energy on bad days.',
-    stat: '73% of users report more consistent daily energy within 30 days',
+    tag: 'Recovery',
+    headline: 'Know if today is a push day or a rest day.',
+    body: 'One clear score every morning. No guessing, no overreaching.',
     color: '#F4175B',
     bg: '#FFF0F4',
   },
   {
     id: 'stress',
     icon: '🧠',
-    tag: 'Stress & Nervous System',
-    headline: 'See your stress load building — days before you crash.',
-    body: 'Elonga maps sympathetic vs. parasympathetic balance every day. Watch how your calendar, sleep, and habits affect your nervous system — in data, not feelings.',
-    stat: 'Stress visible 2–4 days before you consciously feel it',
+    tag: 'Stress',
+    headline: 'See stress building before you feel it.',
+    body: 'Track your nervous system balance daily and catch burnout before it catches you.',
     color: '#9B1FE8',
     bg: '#F5F0FF',
   },
   {
     id: 'focus',
     icon: '🎯',
-    tag: 'Focus & Output',
-    headline: 'Schedule your hardest work for when your body is actually ready.',
-    body: 'HRV correlates strongly with cognitive performance. Elonga shows you your peak focus windows — so your best thinking lands on your most important work.',
-    stat: 'High-readiness days correlate with 31% better decision quality',
+    tag: 'Focus & Energy',
+    headline: 'More energy. Better days. On demand.',
+    body: 'Know your peak hours and protect them. Your body has a schedule — now you do too.',
     color: '#E87F1F',
     bg: '#FFF6F0',
   },
@@ -46,9 +43,8 @@ const subpages = [
     id: 'early-warning',
     icon: '🛡️',
     tag: 'Early Warning',
-    headline: 'A 24–72h heads-up before you get sick.',
-    body: 'HRV drops sharply as your immune system activates. Elonga flags it before you feel the first symptom — giving you time to clear your calendar before you\'re forced to.',
-    stat: '71% of illnesses detected 1–3 days before first symptom',
+    headline: 'Know you\'re getting sick before you feel it.',
+    body: '24–72h warning before the first symptom. Never get blindsided again.',
     color: '#1FA8E8',
     bg: '#F0F8FF',
   },
@@ -56,19 +52,17 @@ const subpages = [
     id: 'biological-age',
     icon: '⏳',
     tag: 'Biological Age',
-    headline: 'Find out how fast — or slow — you\'re actually aging.',
-    body: 'Your Functional Age score compares your HRV to thousands of same-age peers. Small lifestyle changes show up as measurable biological progress within weeks.',
-    stat: 'Users report avg. −3.2 years functional age in 6 months',
+    headline: 'Find out how fast you\'re actually aging.',
+    body: 'Your functional age vs. peers — and how to move the number in the right direction.',
     color: '#1FE87F',
     bg: '#F0FFF8',
   },
   {
     id: 'habits',
     icon: '📊',
-    tag: 'Habit Insights',
-    headline: 'See exactly what alcohol, sleep, and stress do to your body.',
-    body: 'Log habits, Elonga correlates them with your HRV. Finally understand which of your routines are investing in your future — and which are quietly withdrawing from it.',
-    stat: '83% of users change at least one habit within 30 days',
+    tag: 'Habits',
+    headline: 'See what your habits actually do to your body.',
+    body: 'Alcohol, sleep, coffee — finally measured, not guessed.',
     color: '#E8C81F',
     bg: '#FFFDF0',
   },
@@ -159,19 +153,6 @@ export default function Benefits() {
                 <p style={{ fontSize: 14, color: 'var(--gray-muted)', lineHeight: 1.7 }}>
                   {page.body}
                 </p>
-              </div>
-
-              {/* Stat chip */}
-              <div style={{
-                marginTop: 'auto',
-                background: `${page.color}0F`,
-                borderRadius: 12,
-                padding: '10px 14px',
-                fontSize: 12, fontWeight: 600,
-                color: page.color,
-                lineHeight: 1.4,
-              }}>
-                📈 {page.stat}
               </div>
             </div>
           ))}

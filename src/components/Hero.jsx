@@ -56,13 +56,12 @@ export default function Hero() {
         <p className="fade-up delay-2" style={{
           fontSize: 'clamp(17px, 2.2vw, 20px)',
           color: 'rgba(255,255,255,0.65)',
-          maxWidth: 580, margin: '0 auto 48px',
+          maxWidth: 540, margin: '0 auto 48px',
           lineHeight: 1.65,
           fontWeight: 400,
         }}>
-          3 minutes every morning. That's all it takes to see burnout building,
-          energy draining, and illness approaching —&nbsp;
-          <em style={{ color: 'rgba(255,255,255,0.85)', fontStyle: 'normal', fontWeight: 600 }}>before you feel any of it.</em>
+          3 minutes every morning reveals what your body already knows —
+          <em style={{ color: 'rgba(255,255,255,0.85)', fontStyle: 'normal', fontWeight: 600 }}> before you feel it.</em>
         </p>
 
         {/* CTAs */}

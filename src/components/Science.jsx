@@ -11,53 +11,13 @@ function useInView() {
   return [ref, inView]
 }
 
-const accuracy = [
-  { metric: 'HRV accuracy', value: '97%', compare: 'vs. 20-min lab session', color: '#F4175B' },
-  { metric: 'Readiness prediction', value: '94%', compare: 'correlation with subjective recovery', color: '#E8105A' },
-  { metric: 'Illness detection', value: '71%', compare: 'caught before first symptom', color: '#D00F52' },
-  { metric: 'Stress identification', value: '89%', compare: 'vs. cortisol lab markers', color: '#B80E48' },
-]
-
-const pillars = [
-  {
-    number: '3M+',
-    label: 'Measurements',
-    detail: 'Real-world data trained the 3-minute algorithm — validated against lab-standard 20-minute sessions.',
-  },
-  {
-    number: '30+',
-    label: 'Years of HRV research',
-    detail: 'Co-founder Dr. Radim Šlachta, PhD has spent over three decades developing the spectral HRV methodology.',
-  },
-  {
-    number: '2002',
-    label: 'First published study',
-    detail: 'Spectral Analysis of Heart Rate Variability — the methodological foundation that powers every Elonga measurement.',
-  },
-  {
-    number: 'WHO',
-    label: 'Collaboration',
-    detail: 'The methodology has been validated through clinical practice and collaboration with the World Health Organization.',
-  },
-]
-
-const methodSteps = [
-  {
-    title: 'Optical detection',
-    body: 'The sensor reads heartbeat intervals down to 1ms precision using photoplethysmography (PPG) technology.'
-  },
-  {
-    title: 'Spectral HRV analysis',
-    body: 'Rather than simple RMSSD (used by most wearables), Elonga runs full frequency-domain spectral analysis — separating sympathetic and parasympathetic contributions.'
-  },
-  {
-    title: 'Autonomic nervous system mapping',
-    body: 'The algorithm identifies the ratio of stress (LF) to recovery (HF) activity — the same metric used in cardiology and elite sports labs.'
-  },
-  {
-    title: 'Personalized baseline',
-    body: 'After ~14 days, Elonga calibrates to your unique physiology. Your readiness score becomes increasingly personal and accurate over time.'
-  },
+const stats = [
+  { number: '97%', label: 'HRV accuracy', sub: 'vs. lab session' },
+  { number: '3M+', label: 'Measurements', sub: 'trained the algorithm' },
+  { number: '30+', label: 'Years research', sub: 'by Dr. Šlachta, PhD' },
+  { number: 'WHO', label: 'Collaboration', sub: 'methodology validated' },
+  { number: '71%', label: 'Illness caught', sub: 'before symptoms' },
+  { number: '2002', label: 'First study', sub: 'published' },
 ]
 
 export default function Science() {
@@ -70,7 +30,6 @@ export default function Science() {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Decorative */}
       <div style={{
         position: 'absolute', top: -100, right: -100,
         width: 500, height: 500,
@@ -79,134 +38,45 @@ export default function Science() {
       }} />
 
       <div style={{ maxWidth: 1100, margin: '0 auto', position: 'relative', zIndex: 1 }}>
-        {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 72 }}>
+        <div style={{ textAlign: 'center', marginBottom: 64 }}>
           <span className="section-label-light">The science</span>
           <h2 style={{ fontSize: 'clamp(30px, 5vw, 52px)', color: '#fff', marginBottom: 16 }}>
             30 years of research.
             <br />
             <span className="gradient-text">3 minutes of your morning.</span>
           </h2>
-          <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.55)', maxWidth: 500, margin: '0 auto', lineHeight: 1.65 }}>
-            Spectral HRV analysis was developed in cardiology labs, not fitness startups. Elonga brings it to your forearm.
+          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.45)', maxWidth: 420, margin: '0 auto' }}>
+            Clinical-grade HRV analysis. Built in cardiology labs, not Silicon Valley.
           </p>
         </div>
 
-        {/* Accuracy numbers — Oura style clinical benchmarks */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
           gap: 16,
-          marginBottom: 32,
         }}>
-          {accuracy.map((a, i) => (
-            <div key={i} style={{
-              background: 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(255,255,255,0.08)',
-              borderRadius: 20,
-              padding: '28px 24px',
-              textAlign: 'center',
-              opacity: inView ? 1 : 0,
-              transform: inView ? 'translateY(0)' : 'translateY(24px)',
-              transition: `all 0.5s ease ${i * 0.08}s`,
-            }}>
-              <div style={{ fontSize: 'clamp(32px,4vw,44px)', fontWeight: 800, color: a.color, letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: 6 }}>
-                {a.value}
-              </div>
-              <div style={{ fontSize: 13, fontWeight: 700, color: '#fff', marginBottom: 6 }}>
-                {a.metric}
-              </div>
-              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', lineHeight: 1.5 }}>
-                {a.compare}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <p style={{ textAlign: 'center', fontSize: 12, color: 'rgba(255,255,255,0.2)', marginBottom: 48, fontStyle: 'italic' }}>
-          Based on internal validation study, n=1,240 users · spectral HRV vs. 20-min Kubios lab protocol
-        </p>
-
-        {/* Pillar stats row */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: 16,
-          marginBottom: 64,
-        }}>
-          {pillars.map((p, i) => (
+          {stats.map((s, i) => (
             <div key={i} style={{
               background: 'rgba(255,255,255,0.04)',
               border: '1px solid rgba(255,255,255,0.08)',
               borderRadius: 20,
-              padding: '28px 24px',
+              padding: '28px 20px',
               textAlign: 'center',
               opacity: inView ? 1 : 0,
               transform: inView ? 'translateY(0)' : 'translateY(24px)',
-              transition: `all 0.6s ease ${i * 0.1}s`,
+              transition: `all 0.5s ease ${i * 0.07}s`,
             }}>
-              <div style={{
-                fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800,
-                color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: 6
-              }}>
-                {p.number}
+              <div style={{ fontSize: 'clamp(28px,4vw,40px)', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: 8 }}>
+                {s.number}
               </div>
-              <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--pink)', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 12 }}>
-                {p.label}
+              <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--pink)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>
+                {s.label}
               </div>
-              <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>
-                {p.detail}
-              </p>
+              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.3)' }}>
+                {s.sub}
+              </div>
             </div>
           ))}
-        </div>
-
-        {/* Method breakdown */}
-        <div style={{
-          background: 'rgba(255,255,255,0.03)',
-          border: '1px solid rgba(255,255,255,0.07)',
-          borderRadius: 24,
-          padding: '40px',
-          opacity: inView ? 1 : 0,
-          transition: 'opacity 0.6s ease 0.4s',
-        }}>
-          <h3 style={{ fontSize: 20, fontWeight: 700, color: '#fff', marginBottom: 32, letterSpacing: '-0.02em' }}>
-            What happens inside those 3 minutes
-          </h3>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: 24,
-          }}>
-            {methodSteps.map((step, i) => (
-              <div key={i} style={{ display: 'flex', gap: 14 }}>
-                <div style={{
-                  width: 28, height: 28, borderRadius: '50%', flexShrink: 0,
-                  background: 'var(--pink)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 12, fontWeight: 800, color: '#fff', marginTop: 2,
-                }}>
-                  {i + 1}
-                </div>
-                <div>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: '#fff', marginBottom: 6, letterSpacing: '-0.01em' }}>
-                    {step.title}
-                  </div>
-                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.65 }}>
-                    {step.body}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* vs other wearables note */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 24, justifyContent: 'center' }}>
-          <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--pink)', flexShrink: 0 }} />
-          <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', fontStyle: 'italic' }}>
-            Most smartwatches use only RMSSD — a single HRV metric. Elonga runs full spectral analysis, separating sympathetic and parasympathetic contributions for a clinically complete picture.
-          </p>
         </div>
       </div>
     </section>
